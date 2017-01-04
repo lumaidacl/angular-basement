@@ -1,0 +1,16 @@
+body{
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+.todo{
+  width: 20em;
+  margin: 0 auto;
+}
+.todo__list{
+  list-style: none;
+}
+.todo__item{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}

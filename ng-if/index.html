@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Labo</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+</head>
+<body>
+  <div ng-controller="MoviesController as movies">
+    <ul>
+      <li ng-repeat="movie in movies.favorites">
+        <p>{{movie.title}}</p>
+        <p>Released in: {{ movie.year }}</p>
+        <p ng-if="movie.popular">This movie is popular</p>
+        <p ng-if="movie.year < '2000'">This movie is old</p>
+      </li>
+    </ul>
+  </div>
+    <!--ng-if is very similar respect to ng-show and ng-hide but the difference is
+      in DOM if you want to destroy use ng-if -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/Moviescontroller.js"></script>
+</body>
+</html>
