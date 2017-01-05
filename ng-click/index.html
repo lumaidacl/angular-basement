@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Labo</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div ng-controller="MoviesController as movies">
+    <div class="likes">
+      <p>
+        Todo like list
+      </p>
+      <ul>
+        <li ng-repeat="like in movies.likesList">
+          <p>{{ like.title }}</p>
+
+        </li>
+      </ul>
+    </div>
+    <ul>
+      <li ng-repeat="movie in movies.favorites">
+        <p>
+          {{ movie.title }}
+        </p>
+        <p>Released in: {{ movie.year }}</p>
+      </li>
+    </ul>
+  </div>
+    <!--ng-click declarar en un elemento que se enlazara a una funcion en particular
+        controller events -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/Moviescontroller.js"></script>
+</body>
+</html>

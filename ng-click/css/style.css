@@ -1,0 +1,12 @@
+body{
+  font-size: 16px;
+}
+.old{
+  background-color: orange;
+}
+.modern{
+  background-color: gray;
+}
+.new{
+  background-color: yellow;
+}
