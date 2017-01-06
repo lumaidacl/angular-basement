@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="moduleOne">
+<head>
+  <meta charset="UTF-8">
+  <title>Class one</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+</head>
+<body>
+  <div ng-controller="UserController as user">
+    <form ng-submit="user.getUser();">
+      <input type="text" ng-model="user.userId">
+      <button type="submit">
+        Saerch User
+      </button>
+      <pre>{{ user.chosenUser }}</pre> <!--specific user-->
+    </form>
+  </div>
+   <!---->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/UserController.js"></script>
+</body>
+</html>

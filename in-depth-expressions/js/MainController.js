@@ -10,4 +10,4 @@ function MainController(){
 
 angular
   .module('app')
-  .MainController('MainController', MainController);
+  .controller('MainController', MainController);

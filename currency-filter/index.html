@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>My angular app</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+</head>
+<body>
+  <div ng-controller="MainController as main">
+    <p>
+      {{ main.myDate | currency:'USD ' }} <!--depends on country-->
+      <!--Redondeo de valores en angular :0 para el superior y :1 decimal inferior
+        valor-->
+    </p>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/MainController.js"></script>
+</body>
+</html>
