@@ -4,4 +4,4 @@ function FirstController($scope){
 
 angular
   .module('moduleOne')
-  .MainController('MainController', MainController);
+  .controller('MainController', MainController);
