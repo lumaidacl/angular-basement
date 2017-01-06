@@ -16,8 +16,10 @@
           new: movie.year > 2005
         }"
         ng-repeat="movie in movies.favorites">
-        <img ng-src="img/url.jpg {{movie.image}}" alt="">
-        <a ng-href="https://en.wikipedia.org/wiki/The_Bucket_List#/media/File:Bucket_list_poster.jpg {{movie.image}}" target="_blank"></a>
+        <img ng-src="img/url.jpg/{{movie.image}}" alt="movie">
+        <a ng-href="https://en.wikipedia.org/wiki/The_Bucket_List#/media/File:Bucket_list_poster.jpg{{movie.image}}" target="_blank">
+          {{ movie.title }}
+        </a>
         <p>Released in: {{ movie.year }}</p>
         <p ng-if="movie.popular">This movie is popular</p>
         <p ng-if="movie.year < '2000'">This movie is old</p>

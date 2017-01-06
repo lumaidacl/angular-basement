@@ -15,7 +15,17 @@
       <ul>
         <li ng-repeat="like in movies.likesList">
           <p>{{ like.title }}</p>
-
+          <a href="" ng-click="movies.unlike($index);">
+            Unlike!
+          </a>
+        </li>
+        <li ng-repeat="movie in movies.favorites">
+          <p>
+            {{ movie.title }}
+          </p>
+          <a href="" ng-click="movies.addToLikes(movie);">
+            Like this movie
+          </a>
         </li>
       </ul>
     </div>

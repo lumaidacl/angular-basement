@@ -5,8 +5,8 @@ function FirstController(a){
 MainController.$inject = ['$scope'];
 angular
   .module('moduleOne')
-  .controller('MainController', //primer argumento las dependencias, segundo la funcion
+  .controller('MainController',
     ['$scope',
      '$rootScope',
-     MainController
+    MainController
     ]);

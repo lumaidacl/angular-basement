@@ -1,5 +1,8 @@
 function MoviesController(){
   this.likesList = [];
+  this.unlike = function(index){
+    this.likesList.splice(index, 1);
+  };
   this.addToLikes = function (movie){
     this.likesList.push(movie);
   };

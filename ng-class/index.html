@@ -14,8 +14,7 @@
           old: movie.year < 1999,
           modern: movie.year > 1999 && movie.year < 2005,
           new: movie.year > 2005
-        }"
-        ng-repeat="movie in movies.favorites">
+        }">
         <p>{{movie.title}}</p>
         <p>Released in: {{ movie.year }}</p>
         <p ng-if="movie.popular">This movie is popular</p>
@@ -37,7 +36,6 @@
       </li>
     </ul>
   </div>
-    <!--ng-class add css dynamically -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/Moviescontroller.js"></script>
