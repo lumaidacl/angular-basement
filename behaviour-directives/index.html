@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html ng-app="moduleOne">
+<html ng-app="app">
 <head>
   <meta charset="UTF-8">
   <title>Class one</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 </head>
 <body>
-  <div ng-controller="MainController as main">
-    <input type="text" ng-model="main.person.location">
-    <pre>{{ main.person | json }}</pre>
+  <div>
+    <form ng-submit="user.getUser();">
+      <input
+        type="text"
+        ng-model="user.userId"
+        stretch="">
+      <button type="submit">
+        Saerch User
+      </button>
+    </form>
   </div>
-   <!--objeto main json filter debugging so much easier, and much more clear-->
-
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
   <script src="js/app.js"></script>
-  <script src="js/MainController.js"></script>
+  <script src="js/UserController.js"></script>
 </body>
 </html>

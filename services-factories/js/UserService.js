@@ -1,7 +1,7 @@
 function UserService($http) {
   var API = '//jsonplaceholder.typicode.com/users/';
   this.getUser = function (userId) {
-    return http
+    return $http
       .get(API + userId)
       .then(function (response){
         return response.data;
@@ -21,5 +21,5 @@ function UserService($http) {
 
 angular
   .module('app')
-  .service('UserService', UserService);
-//factory es un lugar donde se crean objetos
+  .factory('UserService', UserService);
+//using a factory return an object sintaxis es similar cuando de crear un  modulo

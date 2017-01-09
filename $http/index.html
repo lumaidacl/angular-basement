@@ -6,13 +6,13 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 </head>
 <body>
-  <div ng-controller="UserController as user">
+  <div ng-controller="UserController as user"><!--make api request to specific restful endpoint-->
     <form ng-submit="user.getUser();">
       <input type="text" ng-model="user.userId">
       <button type="submit">
         Saerch User
       </button>
-      <pre>{{ user.chosenUser }}</pre> <!--specific user-->
+      <pre>{{ user.chosenUser }}</pre> <!--specific restful endpoint-->
     </form>
   </div>
    <!---->

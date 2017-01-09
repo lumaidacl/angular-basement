@@ -9,12 +9,12 @@
   <div ng-controller="MoviesController as movies">
     <input
       type="text"
-      placeholder="Type to search"
-      ng-model="search">
+      placeholder="Search by year"
+      ng-model="search"><!--dimension extremadamente poderosa para filtrar colecciones-->
     <a href="" ng-click="type = 'year'">Year</a>
     <a href="" ng-click="type = 'title'">Title</a>
     <ul>
-      <li ng-repeat="movie in movies.favorites | filter: search">
+      <li ng-repeat="movie in movies.favorites | filter: { year: search }"> <!--search property dynamic-->
         <p>{{ movie.title }}</p>
         <p>Released in: {{ movie.year }}</p>
       </li>

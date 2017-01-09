@@ -15,6 +15,8 @@ function UserController(UserService) {
   };
 }
 // id corresponde al usuario utilizando la API
+//a factory is a place werw objects are created
+//similar a un modulo en JS
 angular
   .module('app')
   .controller('MainController', MainController);

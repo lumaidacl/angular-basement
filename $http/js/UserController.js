@@ -1,6 +1,6 @@
 function UserController($http) {
   var ctrl = this;
-  var API = '//jsonplaceholder.typicode.com/users/';
+  var API = '//jsonplaceholder.typicode.com/users/'; //hold simple string
   this.userId = '';
   this.chosenUser = {};
   this.getUser = function () {
