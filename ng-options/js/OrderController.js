@@ -11,6 +11,7 @@ function OrderController(){
   };
   this.submitOrder = function () {
     //communicate with API
+    console.log('Submitted!');
   };
 }
 

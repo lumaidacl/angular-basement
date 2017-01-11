@@ -1,0 +1,46 @@
+
+function orderForm(){
+  return {
+    restrict: 'E',
+    scope: {},
+    bindToController: {
+      data: '=',
+      submit: '&'
+    },
+    controller: 'OrderFormController as form',
+    template: `
+      <pre>{{ form.data | json }}</pre>
+      <form name="orderForm" nonvalidate ng-submit="form.onSubmit();">
+        <input name="name" required="" type="text" ng-model="form.data.name" placeholder="Your name">
+        <div
+          ng-show="orderForm.name.$error.required && orderForm.name.$touched">
+          Name is required!
+        </div>
+        <input name="email" required="" type="email" ng-model="form.data.email" placeholder="Your email">
+        <div ng-show="orderForm.email.$error.required && orderForm.email.$touched">
+          Email is required!
+        </div>
+        <div ng-show="orderForm.email.$error.email && orderForm.email.$touched">
+          Email is invalid!
+        </div>
+        <input name="location" required="" type="text" ng-model="form.data.location" placeholder="Your location">
+        <select
+          name="orderChoice"
+          required=""
+          ng-model="form.data.product"
+          ng-options="product.label for product in form.products">
+          <option value="">Select...</option>
+        </select>
+          <textarea name="comments" placeholder="Any messages (optional)" ng-model="form.data.coments">
+          </textarea>
+          <button type="submit" ng-disabled="orderForm.$invalid">
+            Order
+          </button>
+      </form>
+    `
+  };//create very powerful forms that communicate with other components can update patricular pieces of data and show all validations
+}
+
+angular
+  .module('app')
+  .directive('order-form', order-form);

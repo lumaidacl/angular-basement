@@ -4,11 +4,10 @@ function OrderFormController(){
     id: 1
   },{
     label: 'Product Two',
-    id: 1
-  }
-  {
+    id: 2
+  },{
     label: 'Product Three',
-    id: 1
+    id: 3
   }];
   this.onSubmit = function () {
     //pre-processing
